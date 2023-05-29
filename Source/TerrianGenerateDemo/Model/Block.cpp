@@ -11,7 +11,7 @@ ABlock::ABlock():BlockID(0)
 	PrimaryActorTick.bCanEverTick = false;
 
 	//带一个staticmesh组件
-	mMeshComponent = NewObject<UStaticMeshComponent>(this, TEXT("Block"));
+	mMeshComponent = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Block"));
 	this->SetRootComponent(mMeshComponent);
 }
 
